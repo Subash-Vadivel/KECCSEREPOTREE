@@ -6,6 +6,15 @@ struct node
     int data;
     struct node *left,*right;
 };
+struct node *create(int n,struct node *L,struct node *R)
+{
+    struct node *t1;
+    t1=(struct node *)malloc(sizeof(struct node));
+    t1->data=n;
+    t1->left=L;
+    t1->right=R;
+    return t1;
+}
 int main()
 {
     struct node *root=NULL;
