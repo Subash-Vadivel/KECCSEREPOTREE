@@ -15,6 +15,29 @@ struct node *create(int n,struct node *L,struct node *R)
     t1->right=R;
     return t1;
 }
+struct node *insert(int n,struct node *t1)
+{
+    if(t1==NULL)
+         return (create(n,NULL,NULL));
+    else if(n<t1->data)
+         t1->left= insert(n,t1->left);
+    else
+          t1->right=insert(n,t1->right);
+    return t1;
+}
+void inorder(struct node *t1)
+{
+    if(t1==NULL)
+    {
+        return;
+    }
+    else
+    {
+        inorder(t1->left);
+        printf("%d ",t1->data);
+        inorder(t1->right);
+    }
+}
 int main()
 {
     struct node *root=NULL;
