@@ -1,0 +1,12 @@
+SRS - TEMPLATE
+
+<CONSTRAINS>
+
+Structure name node;
+variable name data;
+Pointers *left,*right;
+main part contains 
+while loop for menu 
+call the appropriate function in switch
+
+<--------->
