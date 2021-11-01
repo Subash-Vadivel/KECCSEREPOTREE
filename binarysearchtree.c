@@ -38,6 +38,31 @@ void inorder(struct node *t1)
         inorder(t1->right);
     }
 }
+int findmin(struct node *t1)
+{
+    if(t1==NULL)
+    {
+        return -1;
+    }
+    while(t1->left!=NULL)
+    {
+        t1=t1->left;
+    }
+    return (t1->data);
+}
+int findmax(struct node *t1)
+{
+    if(t1==NULL)
+    {
+        return -1;
+    }
+    while(t1->right!=NULL)
+    {
+        t1=t1->right;
+    }
+    return (t1->data);
+}
+
 int main()
 {
     struct node *root=NULL;
