@@ -25,6 +25,7 @@ struct node *insert(int n,struct node *t1)
           t1->right=insert(n,t1->right);
     return t1;
 }
+//It is Inorder
 void inorder(struct node *t1)
 {
     if(t1==NULL)
@@ -38,6 +39,7 @@ void inorder(struct node *t1)
         inorder(t1->right);
     }
 }
+//It is a min function
 int findmin(struct node *t1)
 {
     if(t1==NULL)
@@ -50,6 +52,7 @@ int findmin(struct node *t1)
     }
     return (t1->data);
 }
+//It is a max function
 int findmax(struct node *t1)
 {
     if(t1==NULL)
